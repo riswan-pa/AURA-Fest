@@ -21,8 +21,8 @@ export default function Gallery() {
 
   return (
     <div className="max-w-6xl mx-auto px-5 md:px-8 py-14">
-      <h1 className="display font-bold text-4xl md:text-5xl">Gallery</h1>
-      <p className="mt-3" style={{ color: 'var(--muted)' }}>Moments from rehearsals and the stage. Tap a photo to preview or download it.</p>
+      <h1 className="display font-bold text-4xl md:text-5xl fade-up">Gallery</h1>
+      <p className="mt-3 fade-up" style={{ color: 'var(--muted)', animationDelay: '0.05s' }}>Moments from rehearsals and the stage. Tap a photo to preview or download it.</p>
 
       <div className="mt-10">
         {loading ? (
@@ -35,10 +35,10 @@ export default function Gallery() {
               <button
                 key={img.id}
                 onClick={() => setOpenIndex(i)}
-                className="rounded-xl overflow-hidden border block text-left"
+                className="hover-lift rounded-xl overflow-hidden border block text-left"
                 style={{ borderColor: 'var(--line)' }}
               >
-                <img src={img.url} alt={img.caption ?? ''} className="w-full h-full object-cover aspect-square" loading="lazy" />
+                <img src={img.url} alt={img.caption ?? ''} className="hover-scale w-full h-full object-cover aspect-square" loading="lazy" />
               </button>
             ))}
           </div>
