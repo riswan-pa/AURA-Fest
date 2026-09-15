@@ -44,8 +44,8 @@ export default function Results() {
 
   return (
     <div className="max-w-6xl mx-auto px-5 md:px-8 py-14">
-      <h1 className="display font-bold text-4xl md:text-5xl">Results</h1>
-      <p className="mt-3" style={{ color: 'var(--muted)' }}>Winners and grades as they're announced.</p>
+      <h1 className="display font-bold text-4xl md:text-5xl fade-up">Results</h1>
+      <p className="mt-3 fade-up" style={{ color: 'var(--muted)', animationDelay: '0.05s' }}>Winners and grades as they're announced.</p>
 
       <div className="mt-10 space-y-6">
         {loading ? (
@@ -57,7 +57,7 @@ export default function Results() {
             const program = programs[programId]
             if (!program) return null
             return (
-              <div key={programId} className="p-5 rounded-2xl border" style={{ borderColor: 'var(--line)', background: 'var(--panel)' }}>
+              <div key={programId} className="hover-lift p-5 rounded-2xl border" style={{ borderColor: 'var(--line)', background: 'var(--panel)' }}>
                 <div className="flex items-center gap-3 flex-wrap mb-3">
                   <h3 className="font-medium text-lg">{program.name}</h3>
                   <CategoryTag category={program.category} />
