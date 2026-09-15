@@ -42,8 +42,8 @@ export default function Programs() {
 
   return (
     <div className="max-w-6xl mx-auto px-5 md:px-8 py-14">
-      <h1 className="display font-bold text-4xl md:text-5xl">Programs</h1>
-      <p className="mt-3" style={{ color: 'var(--muted)' }}>Items our college is entering, organized by category.</p>
+      <h1 className="display font-bold text-4xl md:text-5xl fade-up">Programs</h1>
+      <p className="mt-3 fade-up" style={{ color: 'var(--muted)', animationDelay: '0.05s' }}>Items our college is entering, organized by category.</p>
 
       <div className="mt-8 flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
         <div className="flex flex-wrap gap-2">
@@ -71,7 +71,7 @@ export default function Programs() {
             {filtered.map((p) => {
               const pts = participantsFor(p.id)
               return (
-                <li key={p.id} className="py-5 flex flex-col md:flex-row md:items-center gap-2 md:gap-6 border-t first:border-t-0" style={{ borderColor: 'var(--line)' }}>
+                <li key={p.id} className="hover-lift py-5 flex flex-col md:flex-row md:items-center gap-2 md:gap-6 border-t first:border-t-0 rounded-lg px-2 -mx-2" style={{ borderColor: 'var(--line)' }}>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 flex-wrap">
                       <h3 className="font-medium text-lg">{p.name}</h3>
