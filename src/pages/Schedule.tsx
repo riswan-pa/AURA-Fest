@@ -27,8 +27,8 @@ export default function Schedule() {
 
   return (
     <div className="max-w-6xl mx-auto px-5 md:px-8 py-14">
-      <h1 className="display font-bold text-4xl md:text-5xl">Schedule</h1>
-      <p className="mt-3" style={{ color: 'var(--muted)' }}>When and where each program happens.</p>
+      <h1 className="display font-bold text-4xl md:text-5xl fade-up">Schedule</h1>
+      <p className="mt-3 fade-up" style={{ color: 'var(--muted)', animationDelay: '0.05s' }}>When and where each program happens.</p>
 
       <div className="mt-10 space-y-10">
         {loading ? (
@@ -41,7 +41,7 @@ export default function Schedule() {
               <h2 className="display font-semibold text-xl mb-4" style={{ color: 'var(--silver)' }}>{day}</h2>
               <ul className="space-y-3">
                 {dayItems.map((item) => (
-                  <li key={item.id} className="flex gap-5 p-4 rounded-xl border" style={{ borderColor: 'var(--line)', background: 'var(--panel)' }}>
+                  <li key={item.id} className="hover-lift flex gap-5 p-4 rounded-xl border" style={{ borderColor: 'var(--line)', background: 'var(--panel)' }}>
                     <div className="w-20 shrink-0 text-sm" style={{ color: 'var(--muted)' }}>
                       {new Date(item.starts_at).toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' })}
                     </div>
