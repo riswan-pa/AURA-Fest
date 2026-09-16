@@ -41,16 +41,12 @@ export default function Home() {
         {heroPhoto ? (
           <>
             <div className="absolute inset-0">
-              {photos.map((p, i) => (
-                <img
-                  key={p.id}
-                  src={p.url}
-                  alt=""
-                  className={`absolute inset-0 w-full h-full object-cover ken-burns transition-opacity duration-[1200ms] ${
-                    i === heroIndex ? 'opacity-100' : 'opacity-0'
-                  }`}
-                />
-              ))}
+              <img
+                key={heroPhoto.id}
+                src={heroPhoto.url}
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover hero-slide"
+              />
             </div>
             <div
               className="absolute inset-0"
