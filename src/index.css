@@ -62,11 +62,12 @@ a { color: inherit; }
   animation: marquee 22s linear infinite;
 }
 
-@keyframes kenburns {
-  0% { transform: scale(1.04) translate(0, 0); }
-  100% { transform: scale(1.14) translate(-1.5%, -1%); }
+@keyframes heroSlide {
+  0% { opacity: 0; transform: scale(1.02); }
+  14% { opacity: 1; }
+  100% { opacity: 1; transform: scale(1.1); }
 }
-.ken-burns { animation: kenburns 14s ease-out both alternate infinite; }
+.hero-slide { animation: heroSlide 5.5s ease-out both; }
 
 .hover-lift {
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
