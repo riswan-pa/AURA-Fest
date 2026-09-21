@@ -18,6 +18,13 @@
   --cat-senior: var(--blue);
   --cat-super_senior: #7c5cff;
   --cat-general: #4caf7d;
+
+  color-scheme: dark;
+}
+
+select, option {
+  color: var(--paper);
+  background-color: var(--ink-2);
 }
 
 * { box-sizing: border-box; }
